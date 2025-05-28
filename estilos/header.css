@@ -1,0 +1,21 @@
+header {
+  background-color: #4b0082; /* Morado oscuro */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(68%) sepia(11%) saturate(4771%) hue-rotate(208deg) brightness(93%) contrast(96%);
+}
+
+.titulo {
+  font-size: 1.5em;
+  color: #e9c4f4; /* Lila */
+  font-style: italic;
+  margin: 0 15px;
+}

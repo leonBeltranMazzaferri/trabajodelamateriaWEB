@@ -1,0 +1,38 @@
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+#galeria .item img {
+  margin-top: 20px;
+  width: 50%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 60px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+#galeria h3 {
+  margin: 0px 0 0;
+  font-style: italic;
+  color: #4b0082; /* Morado oscuro */
+}
+
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+  gap: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+#galeria .item img:focus {
+  transform: scale(1.2);
+  z-index: 10;
+}
