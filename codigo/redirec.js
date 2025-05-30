@@ -6,4 +6,6 @@
     // Redirige a login.html
     window.location.href = 'login.html';
 
+    localStorage.removeItem('hasVisited');
+
   }
