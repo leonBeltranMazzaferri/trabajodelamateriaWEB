@@ -1,4 +1,4 @@
-/* Teléfonos pequeños (pantallas menores a 600px) */
+
 @media (max-width: 600px) {
   #banner img {
     height: 200px;
@@ -80,7 +80,7 @@
   }
 }
 
-/* Tablets (pantallas entre 601px y 1024px) */
+
 @media (min-width: 601px) and (max-width: 1024px) {
   #galeria {
     grid-template-columns: repeat(2, 1fr);
