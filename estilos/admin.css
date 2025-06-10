@@ -4,13 +4,23 @@
     justify-content: center;
     text-align: center;
 }
-#editar{
 
-    width: 60px;
-    height: 60px;
+#editar,
+#eliminar {
+    align-items: center;
+    text-align: center;
+    background-color: #4b0082; /* Morado oscuro */
+    color: #e9c4f4; /* Lila */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    width: 40px;
+
 
 }
-#basura{
 
-
-}
