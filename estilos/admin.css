@@ -20,7 +20,24 @@
     transition: background-color 0.3s ease;
     height: 40px;
     width: 40px;
-
-
+}
+#editar:hover,
+#eliminar:hover {
+    background-color: #6a0dad; /* Morado más claro */
 }
 
+.btn-agregar{
+    background-color: #4b0082; /* Morado oscuro */
+    color: #e9c4f4; /* Lila */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    left: 35%;
+    position: relative;
+    height: 60px;
+    width: 480px;
+}
