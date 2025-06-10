@@ -36,3 +36,9 @@
   transform: scale(1.2);
   z-index: 10;
 }
+
+#contadorCompra{
+
+  width: 66px;
+
+}
