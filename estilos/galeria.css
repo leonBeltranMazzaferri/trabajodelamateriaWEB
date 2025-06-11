@@ -21,12 +21,12 @@
 #galeria h3 {
   margin: 0px 0 0;
   font-style: italic;
-  color: #4b0082; /* Morado oscuro */
+  color: #4b0082; 
 }
 
 #galeria {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 10px;
   padding: 10px;
   text-align: center;
@@ -41,4 +41,26 @@
 
   width: 66px;
 
+}
+@media (max-width: 768px) {
+    #galeria {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    #galeria .item img {
+        width: 100%;            
+        height: auto;           
+        border-radius: 10px;    
+        margin-top: 10px;      
+    }
+
+    #galeria h3 {
+        font-size: 16px;       
+    }
+
+    #contadorCompra {
+        width: 50px;           
+    }
 }

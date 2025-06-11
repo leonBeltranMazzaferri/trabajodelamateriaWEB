@@ -20,3 +20,14 @@ footer .titulo {
   font-style: italic;
 }
 
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px;   /* Reduce el padding lateral y vertical */
+        font-size: 14px;      /* Reduce el tamaño general del texto */
+    }
+
+    footer .titulo {
+        font-size: 1em;       /* Disminuye ligeramente el tamaño del título */
+        line-height: 1.4;     /* Mejora la legibilidad en móviles */
+    }
+}

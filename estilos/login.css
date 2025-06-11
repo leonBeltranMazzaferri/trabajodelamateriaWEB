@@ -142,3 +142,69 @@
 body{
     background-color: #747474;
 }
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-container {
+    width: 100%;             
+    max-width: 90vw;        
+    height: auto;             
+    padding: 20px;            
+    border-radius: 20px;      
+  }
+
+  .title {
+    font-size: 22px;          
+    margin: 10px 0 20px 0;
+  }
+
+  .form {
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+
+  .input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .form-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .page-link-label {
+    font-size: 10px;
+  }
+
+  .sign-up-label {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .sign-up-link {
+    font-size: 10px;
+  }
+
+  .buttons-container {
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .apple-login-button,
+  .google-login-button {
+    padding: 10px;
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .apple-icon,
+  .google-icon {
+    font-size: 16px;
+  }
+}

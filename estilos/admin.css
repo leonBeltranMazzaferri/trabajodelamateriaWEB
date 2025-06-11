@@ -24,3 +24,21 @@
 
 }
 
+@media (max-width: 768px) {
+    .admin-title {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #editar,
+    #eliminar {
+        width: 80%;        
+        height: auto;     
+        font-size: 14px;  
+        padding: 12px;    
+        margin: 5px auto;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

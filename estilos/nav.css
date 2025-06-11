@@ -34,3 +34,27 @@
 .hidden {
   display: none;
 }
+@media (max-width: 768px) {
+  #nav {
+    width: 100%;                 
+    height: auto;                
+    top: 0;
+    right: 0;
+    border-radius: 0;          
+    padding: 15px 10px;
+    position: fixed;
+  }
+
+  #nav ul {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    box-shadow: none;             
+  }
+
+  #nav li {
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
