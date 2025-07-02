@@ -24,6 +24,39 @@
 
 }
 
+#formAdmin {
+    width: 100%;
+    max-width: 1000px;
+    margin: 15px 0;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 15px; */
+}
+
+#AgregarProd, #EditarProd {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    /* breakpoint para tablet */
+
+    #formAdmin {
+        /* flex-direction: row;
+        justify-content: space-between; */
+        grid-template-columns: 1fr 1fr ;
+        gap: 15px;
+
+    }
+
+    /* #AgregarProd, #EditarProd {
+        width: 48%;
+    } */
+    
+
+}
+
 @media (max-width: 768px) {
     .admin-title {
         flex-direction: column;

@@ -25,6 +25,46 @@
 
        <div class="admin-title"><h1>administracion</h1> </div>   
 
+       <div class="agregar">
+        <button class="addcarrito">Agregar Nuevo Producto</button>
+    </div>
+
+    <div id="formAdmin">
+        <section id="AgregarProd">
+            <form action="" class="formularios" id="nuevoProd">
+                <h2>Nuevo Producto</h2>
+                <label for="imagen">Imagen</label>
+                <input type="file" name="imagen" id="imagen">
+                <label for="descrpcion">Descrpción</label>
+                <textarea name="descrpcion" id="descrpcion" rows="8"
+                    placeholder="Escriba la descripción del producto aqui.."></textarea>
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" id="precio" placeholder="Ingrese el precio">
+                <label for="stock">Stock</label>
+                <input type="number" name="stock" id="stock" placeholder="Ingrese la cantidad disponible">
+
+                <input type="submit" value="Agregar Producto" >
+            </form>
+        </section>
+
+        <section id="EditarProd">
+
+            <form action="" class="formularios" id="actualizar">
+                <h2>Actualizar Datos</h2>
+                <label for="imagen">Imagen</label>
+                <input type="file" name="imagen" id="imagen" >
+                <label for="descrpcion">Descripción</label>
+                <textarea name="descrpcion" id="descrpcion" rows="8"></textarea>
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" id="precio" >
+                <label for="stock">Stock</label>
+                <input type="number" name="stock" id="stock" >
+
+                <input type="submit" value="Actualizar Producto">
+            </form>
+        </section>
+    </div>
+
   <section id="galeria">
     <div class="item">
       <img src="images/WhatsApp Image 2025-05-28 at 16.45.39.jpeg" alt="Taza 1"  tabindex="0"/>
