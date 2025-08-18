@@ -1,4 +1,3 @@
-
 let carrito = [];
 try {
   carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -6,7 +5,6 @@ try {
   carrito = [];
   localStorage.removeItem('carrito');
 }
-
 
 function agregarAlCarrito(id) {
   const producto = productos.find(p => p.id === id);
@@ -63,6 +61,20 @@ function mostrarCarrito() {
   });
 }
 
+let productos = [];
+
+function cargarProductosDesdeJSON() {
+  fetch('data/data.json')
+    .then(response => response.json())
+    .then(data => {
+      productos = data;
+      cargarProductos();
+    })
+    .catch(error => {
+      console.error('Error al cargar productos:', error);
+    });
+}
+
 function cargarProductos() {
   const galeria = document.getElementById('galeria');
   if (!galeria) return;
@@ -84,6 +96,6 @@ function cargarProductos() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  cargarProductos();
+  cargarProductosDesdeJSON();
   mostrarCarrito();
 });
