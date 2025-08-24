@@ -1,91 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/average.css">
-    <link rel="stylesheet" href="estilos/header.css">
-    <link rel="stylesheet" href="estilos/nav.css">
-    <link rel="stylesheet" href="estilos/footer.css">
-    <link rel="stylesheet" href="estilos/banner.css">
-    <link rel="stylesheet" href="estilos/galeria.css">
-
-    <title>tazasSUO</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/average.css">
+  <link rel="stylesheet" href="estilos/header.css">
+  <link rel="stylesheet" href="estilos/nav.css">
+  <link rel="stylesheet" href="estilos/footer.css">
+  <link rel="stylesheet" href="estilos/banner.css">
+  <link rel="stylesheet" href="estilos/galeria.css">
+  <title>tazasSUO</title>
 </head>
 <body>
-    
-<header id="header"></header>
-
-<nav id="nav" class="hidden" ></nav>
+  <header id="header"></header>
+  <nav id="nav" class="hidden"></nav>
 
   <div id="banner">
     <img src="images/ChatGPT Image 28 may 2025, 17_36_56.png" alt="Banner">
   </div>
-  
-  <section id="galeria">
-    <!-- <div class="item">
-      <img src="images/WhatsApp Image 2025-05-28 at 16.45.39.jpeg" alt="Taza 1"  tabindex="0"/>
-      <h2>Vasijita</h2>
-      <h3>Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.</h3>
-      <p>$120.00</p>
-      <button onclick="agregarAlCarrito('Producto 1', 10)">Agregar</button>
-      <input type="number" placeholder="cantidad" id="contadorCompra"> 
-    </div>
-    <div class="item">
-      <img src="images/WhatsApp Image 2025-05-28 at 16.45.40 (1).jpeg" alt="Taza 2"  tabindex="0"/>
-      <h2>Vasijita</h2>
-      <h3>Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.</h3>
-      <p>$135.00</p>
-      <button onclick="agregarAlCarrito('Producto 2', 10)">Agregar</button>
-      <input type="number" placeholder="cantidad" id="contadorCompra">
-    </div>
-    <div class="item">
-      <img src="images/WhatsApp Image 2025-05-28 at 16.45.40 (2).jpeg" alt="Taza 3" tabindex="0" />
-      <h2>Vasijita</h2>
-      <h3>Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.</h3>
-      <p>$135.00</p>
-      <button onclick="agregarAlCarrito('Producto 2', 10)">Agregar</button>
-      <input type="number" placeholder="cantidad" id="contadorCompra">
-    </div>
-    <div class="item">
-      <img src="images/WhatsApp Image 2025-05-28 at 16.45.40 (3).jpeg" alt="Taza 4"  tabindex="0"/>
-      <h2>Vasijita</h2>
-      <h3>Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.</h3>
-      <p>$135.00</p> -->
-      <button onclick="agregarAlCarrito('Producto 2', 10)">Agregar</button>
-      <input type="number" placeholder="cantidad" id="contadorCompra">
-    </div>
-    <div class="item">
-      <img src="images/WhatsApp Image 2025-05-28 at 16.45.40 (4).jpeg" alt="Taza 5" tabindex="0" />
-      <h2>Vasijita</h2>
-      <h3>Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.</h3>
-      <p>$135.00</p>
-      <button onclick="agregarAlCarrito('Producto 2', 10)">Agregar</button>
-      <input type="number" placeholder="cantidad" id="contadorCompra">
-    </div>
-    <div class="item">
-      <img src="images/WhatsApp Image 2025-05-28 at 16.45.40.jpeg" alt="Taza 6"  tabindex="0"/>
-      <h2>Vasijita</h2>
-      <h3>Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.</h3>
-      <p>$135.00</p>
-      <button onclick="agregarAlCarrito('Producto 2', 10)">Agregar</button>
-      <input type="number" placeholder="cantidad" id="contadorCompra">
-    </div>
 
+  <main>
     <h1>Carrito de Compras</h1>
-  <div id="carrito-container"></div>
+    <div id="carrito-container"></div>
 
-  <h2>Productos Disponibles</h2>
-  <div id="productos"></div>
-  </section>
+    <h2>Productos Disponibles</h2>
+    <!-- Ahora sí con id="galeria" -->
+    <div id="galeria"></div>
+  </main>
 
-
-
-<footer id="footer" ></footer>
-<script src="/codigo/prod.js"></script>
-<script src="/codigo/carrito.js"></script>
-<script src="codigo/modulos.js"></script>
-
+  <footer id="footer"></footer>
+  <script src="codigo/prod.js"></script>
+  <script src="codigo/carrito.js"></script>
+  <script src="codigo/modulos.js"></script>
 </body>
 </html>

@@ -7,8 +7,11 @@ document.querySelector('#header').innerHTML = `
 
     <a href="carrito.html">
     <button id="cartBtn"><img src="images/cart.png" alt="carrito"></button></a>
-    </div>
+ 
 
+    <a href="favoritos.html">
+     <button id="cartBtn"><img src="images/cart.png" alt="carrito"></button></a>
+</div>
   <h1 class="titulo">SUO</h1>
 
   <div class="header-right">

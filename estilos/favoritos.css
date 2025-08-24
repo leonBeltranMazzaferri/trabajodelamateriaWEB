@@ -1,0 +1,109 @@
+/* Fondo de la página */
+body {
+  background-color: #e1bee7; /* lila claro */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+#favoritos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px); /* tamaño fijo de cada producto */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center; /* centrar productos */
+}
+
+/* Cada producto */
+#favoritos-container .item {
+  width: 150px; /* ancho fijo */
+  height: 280px; /* alto fijo */
+  background: linear-gradient(145deg, #f3e5f5, #f8bbd0);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Efecto hover */
+#favoritos-container .item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Imagen del producto */
+#favoritos-container .item img {
+  width: 100%;
+  height: 120px; /* altura fija */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+/* Títulos y descripción */
+#favoritos-container .item h2 {
+  font-size: 0.95rem;
+  color: #4b0082; /* lila oscuro */
+  margin: 2px 0;
+  line-height: 1.1;
+}
+
+#favoritos-container .item h3 {
+  font-size: 0.7rem;
+  color: #ad1457; /* rosa fuerte */
+  font-style: italic;
+  margin: 2px 0;
+  line-height: 1.1;
+}
+
+/* Precio */
+#favoritos-container .item p {
+  font-weight: bold;
+  color: #6a1b9a;
+  margin: 2px 0;
+}
+
+/* Botón eliminar */
+#favoritos-container .item button {
+  background-color: #f06292;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 4px;
+  font-size: 0.75rem;
+}
+
+#favoritos-container .item button:hover {
+  background-color: #ec407a;
+}
+
+/* Título principal de la página */
+h1 {
+  text-align: center;
+  color: #8e24aa;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+/* Enlace para volver a tienda */
+a {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #ad1457;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
