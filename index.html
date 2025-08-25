@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="estilos/footer.css">
   <link rel="stylesheet" href="estilos/banner.css">
   <link rel="stylesheet" href="estilos/galeria.css">
+  <link rel="stylesheet" href="estilos/carrito.css"> <!-- Agrega esta línea -->
   <title>tazasSUO</title>
 </head>
 <body>
@@ -21,15 +22,24 @@
   </div>
 
   <main>
-    <h1>Carrito de Compras</h1>
-    <div id="carrito-container"></div>
-
     <h2>Productos Disponibles</h2>
-    <!-- Ahora sí con id="galeria" -->
     <div id="galeria"></div>
   </main>
 
   <footer id="footer"></footer>
+  
+  <!-- Modal Carrito (oculto por defecto) -->
+  <div id="carrito-modal" class="carrito-modal hidden">
+    <div class="carrito-modal-content">
+      <span id="close-carrito" class="close-carrito">&times;</span>
+      <h2 class="carrito-titulo">
+        <img src="images/cart.png" alt="Carrito" style="height: 1.2em; vertical-align: middle; margin-right: 8px;">
+        Tu Carrito
+      </h2>
+      <div id="carrito-container"></div>
+    </div>
+  </div>
+  
   <script src="codigo/prod.js"></script>
   <script src="codigo/carrito.js"></script>
   <script src="codigo/modulos.js"></script>
