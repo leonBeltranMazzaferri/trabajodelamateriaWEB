@@ -1,31 +1,4 @@
 
-// Manejo de carrito y favoritos
-
-let carrito = [];
-let favoritos = [];
-
-try {
-  carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-} catch {
-  carrito = [];
-  localStorage.removeItem('carrito');
-}
-
-try {
-  favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-} catch {
-  favoritos = [];
-  localStorage.removeItem('favoritos');
-}
-
-function guardarCarrito() {
-  localStorage.setItem('carrito', JSON.stringify(carrito));
-}
-
-function guardarFavoritos() {
-  localStorage.setItem('favoritos', JSON.stringify(favoritos));
-}
-
 
 // Funciones del carrito
 
@@ -114,19 +87,6 @@ function eliminarDelCarrito(id) {
 
 
 // Funciones de favoritos
-
-function agregarAFavoritos(producto) {
-  const existe = favoritos.find(p => p.id === producto.id);
-  if (existe) {
-    alert(`"${producto.nombre}" ya está en favoritos`);
-    console.log(`"${producto.nombre}" ya estaba en favoritos`);
-    return;
-  }
-  favoritos.push(producto);
-  guardarFavoritos();
-  alert(`"${producto.nombre}" agregado a favoritos`);
-  console.log(`"${producto.nombre}" agregado a favoritos`);
-}
 
 
 // Cargar productos desde JSON
