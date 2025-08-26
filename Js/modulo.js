@@ -1,3 +1,6 @@
+// ==========================
+// HEADER, NAV Y FOOTER
+// ==========================
 document.querySelector('#header').innerHTML = `
   <div class="header-left">
     <button id="searchBtn">
@@ -11,14 +14,12 @@ document.querySelector('#header').innerHTML = `
     </a>
 
     <a href="carrito.html">
-      <button id="cartBtn">
-        <img src="images/cart.png" alt="carrito">
-      </button>
+      <button id="cartBtn"><img src="images/cart.png" alt="carrito"></button>
     </a>
 
     <a href="favoritos.html">
-      <button id="cartBtn">
-        <img src="images/heart.png" alt="carrito">
+      <button id="favBtn">
+        <img src="images/heart.png" alt="favoritos">
       </button>
     </a>
   </div>
@@ -53,18 +54,9 @@ document.querySelector('#footer').innerHTML = `
   <h1 class="titulo">leon beltran -- belen martinez -- brisa farias</h1>
 `;
 
+
 document.getElementById('menuBtn').addEventListener('click', () => {
-  const nav = document.getElementById('nav');
-  nav.classList.toggle('hidden');
+  document.getElementById('nav').classList.toggle('hidden');
 });
 
-// Mostrar el modal del carrito al hacer clic en el botón de carrito
-document.querySelectorAll('#cartBtn')[0].addEventListener('click', function(e) {
-  e.preventDefault();
-  document.getElementById('carrito-modal').classList.remove('hidden');
-});
 
-// Cerrar el modal del carrito
-document.getElementById('close-carrito').addEventListener('click', function() {
-  document.getElementById('carrito-modal').classList.add('hidden');
-});

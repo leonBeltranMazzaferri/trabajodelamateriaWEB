@@ -1,4 +1,4 @@
-/* --- MAIN Y GENERAL --- */
+
 main {
   max-width: 1000px;
   margin: 30px auto;
@@ -21,8 +21,8 @@ main h3 {
   text-align: center;
 }
 
-/* --- CARRITO ITEMS --- */
-#carrito-items .item {
+
+#carrito-container .producto-carrito {
   display: flex;
   align-items: center;
   border: 1px solid #ddd;
@@ -31,13 +31,14 @@ main h3 {
   border-radius: 8px;
   background-color: #fff;
   transition: transform 0.2s ease;
+  flex-wrap: wrap;
 }
 
-#carrito-items .item:hover {
+#carrito-container .producto-carrito:hover {
   transform: scale(1.01);
 }
 
-#carrito-items img {
+#carrito-container img {
   width: 120px;
   height: auto;
   border-radius: 8px;
@@ -45,24 +46,15 @@ main h3 {
   object-fit: cover;
 }
 
-#carrito-items h2 {
-  font-size: 1.2em;
-  margin: 0 0 5px;
+#carrito-container div {
+  flex: 1;
+  min-width: 180px;
 }
 
-#carrito-items h3 {
-  font-weight: normal;
-  font-size: 0.95em;
-  color: #555;
-  margin: 5px 0;
+#carrito-container p {
+  margin: 8px 0;
 }
 
-#carrito-items p {
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-/* --- BOTONES DEL CARRITO --- */
 .eliminar-item {
   background: linear-gradient(90deg, #d1a4ff 0%, #b47cff 100%);
   border: none;
@@ -70,20 +62,16 @@ main h3 {
   padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
-  margin-left: auto;
   font-weight: bold;
   font-size: 1em;
-  box-shadow: 0 2px 8px rgba(106,13,173,0.08);
   transition: background 0.2s, transform 0.2s;
 }
 
 .eliminar-item:hover {
   background: linear-gradient(90deg, #b47cff 0%, #d1a4ff 100%);
   transform: scale(1.07);
-  color: #fff;
 }
 
-/* --- NUEVOS BOTONES Y INPUTS --- */
 .input-cantidad-2 {
   width: 60px;
   padding: 8px;
@@ -105,7 +93,6 @@ main h3 {
   font-weight: bold;
   cursor: pointer;
   margin-right: 8px;
-  box-shadow: 0 2px 8px rgba(106,13,173,0.08);
   transition: background 0.2s, transform 0.2s;
 }
 
@@ -123,7 +110,6 @@ main h3 {
   font-size: 1em;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(173,20,87,0.08);
   transition: background 0.2s, transform 0.2s;
 }
 
@@ -132,7 +118,6 @@ main h3 {
   transform: scale(1.07);
 }
 
-/* --- MODAL DEL CARRITO --- */
 .carrito-modal {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -141,6 +126,7 @@ main h3 {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 10px;
 }
 
 .carrito-modal.hidden {
@@ -152,31 +138,28 @@ main h3 {
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
   padding: 32px 40px;
-  min-width: 320px;
-  max-width: 90vw;
-  max-height: 80vh;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  border: 3px solid #6a0dad; /* borde violeta oscuro */
+  border: 3px solid #6a0dad;
 }
 
-/* Header lila clarito para el modal */
+
 .carrito-modal-header {
-  background: #f3e5f5; /* lila clarito */
+  background: #f3e5f5;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  padding: 18px 40px 12px 40px;
+  padding: 18px 20px 12px 20px;
   display: flex;
   align-items: center;
-  position: relative;
-  margin: -32px -40px 24px -40px; /* sobresale del padding del modal-content */
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .close-carrito {
-  position: absolute;
-  top: 16px;
-  right: 24px;
-  font-size: 2em;
+  font-size: 1.8em;
   cursor: pointer;
   color: #888;
 }
@@ -184,21 +167,19 @@ main h3 {
 .carrito-titulo {
   font-size: 1.5em;
   font-weight: 600;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
   color: #333;
 }
 
-/* --- OTROS --- */
 #total-final {
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: #222;
+  text-align: right;
+  margin-top: 20px;
 }
 
 #boton-comprar {
   display: block;
-  margin: 30px auto 0;
+  margin: 20px auto 0;
   padding: 12px 24px;
   font-size: 1em;
   background-color: #1e90ff;
@@ -226,55 +207,58 @@ main h3 {
   border: 1px solid #c8e6c9;
 }
 
-/* --- NAVBAR --- */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #6a0dad; /* púrpura oscuro */
-  color: #ffffff;
-  padding: 15px 30px;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
-.navbar h1 a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.4em;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.navbar h1 a:hover {
-  color: #e0b3ff; /* lila claro */
-}
-
-.carrito-info {
-  font-size: 1em;
-  background-color: #8133d4;
-  padding: 8px 16px;
-  border-radius: 8px;
-  box-shadow: inset 0 0 5px rgba(255,255,255,0.2);
-}
-
-.carrito-info span {
-  font-weight: bold;
-  color: #ffddff;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 600px) {
-  .navbar {
+@media (max-width: 768px) {
+  #carrito-container .producto-carrito {
     flex-direction: column;
-    gap: 10px;
-    text-align: center;
+    align-items: flex-start;
   }
 
-  .carrito-info {
-    font-size: 0.95em;
+  #carrito-container img {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .input-cantidad-2 {
+    margin-bottom: 10px;
+  }
+
+  .btn-agregar-2, .btn-fav-2, .eliminar-item {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .carrito-modal-content {
+    padding: 20px;
+  }
+
+  .carrito-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #total-final {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 15px;
+  }
+
+  #carrito-container img {
+    max-width: 150px;
+  }
+
+  .btn-agregar-2, .btn-fav-2, .eliminar-item {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  #boton-comprar {
+    padding: 10px 16px;
   }
 }

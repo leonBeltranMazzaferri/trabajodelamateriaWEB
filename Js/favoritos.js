@@ -1,51 +1,17 @@
-
-// VARIABLES GLOBALES
-
-let carrito = [];
+// favoritos.js
 let favoritos = [];
-let productos = []; 
-
-
-// SINCRONIZAR CON LOCALSTORAGE
-
-function syncCarrito() {
-  try {
-    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-  } catch {
-    carrito = [];
-  }
-}
 
 function syncFavoritos() {
   try {
-    favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
   } catch {
     favoritos = [];
   }
 }
 
-function guardarCarrito() {
-  localStorage.setItem('carrito', JSON.stringify(carrito));
-}
-
 function guardarFavoritos() {
-  localStorage.setItem('favoritos', JSON.stringify(favoritos));
+  localStorage.setItem("favoritos", JSON.stringify(favoritos));
 }
-
-
-// CARGAR PRODUCTOS DESDE JSON
-
-function cargarProductosDesdeJSON(callback) {
-  fetch("data/data.json")
-    .then(res => res.json())
-    .then(data => {
-      productos = data;
-      if (callback) callback();
-    })
-    .catch(err => console.error("Error cargando productos:", err));
-}
-
-// FAVORITOS
 
 function agregarAFavoritos(producto) {
   syncFavoritos();
@@ -72,11 +38,10 @@ function mostrarFavoritos() {
   const container = document.getElementById("favoritos-container");
   if (!container) return;
 
-  // Limpiar container antes de renderizar
-  container.innerHTML = "";
+  container.innerHTML = "<h2>Favoritos</h2>";
 
   if (favoritos.length === 0) {
-    container.innerHTML += "<p>No hay productos en favoritos.</p>";
+    container.innerHTML += "<p>No tienes productos en favoritos.</p>";
     return;
   }
 
@@ -97,9 +62,6 @@ function mostrarFavoritos() {
   });
 }
 
-
-// AGREGAR DESDE FAVORITOS AL CARRITO
-
 function agregarDesdeFavoritos(id) {
   syncCarrito();
   syncFavoritos();
@@ -108,7 +70,7 @@ function agregarDesdeFavoritos(id) {
   if (!producto) return alert("Producto no encontrado en favoritos");
 
   const input = document.getElementById(`fav-cantidad-${id}`);
-  let cantidad = parseInt(input.value);
+  let cantidad = parseInt(input?.value, 10);
   if (isNaN(cantidad) || cantidad < 1) cantidad = 1;
 
   const existente = carrito.find(p => Number(p.id) === Number(id));
@@ -120,13 +82,5 @@ function agregarDesdeFavoritos(id) {
 
   guardarCarrito();
   alert(`"${producto.nombre}" agregado al carrito (${cantidad} unidades)`);
+  mostrarCarrito();
 }
-
-
-// INICIALIZACIÓN
-
-document.addEventListener("DOMContentLoaded", () => {
-  syncFavoritos();
-  syncCarrito();
-  cargarProductosDesdeJSON(mostrarFavoritos);
-});
