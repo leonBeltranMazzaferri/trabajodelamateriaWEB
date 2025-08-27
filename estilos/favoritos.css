@@ -107,3 +107,122 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+
+@media (min-width: 400px) {
+/* Fondo general */
+body {
+  background: linear-gradient(to bottom, #f3e5f5, #fce4ec);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #4b0082;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: #7b1fa2;
+  font-size: 1.4rem;
+  margin: 20px 16px 10px;
+}
+
+/* Enlace para volver */
+a {
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #d81b60;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal en grid de 2 columnas */
+#favoritos-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas */
+  gap: 16px;
+  padding: 0 12px 24px;
+  box-sizing: border-box;
+}
+
+/* Tarjeta de producto */
+#favoritos-container .item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Imagen */
+#favoritos-container .item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-bottom: 1px solid #f8bbd0;
+}
+
+/* Contenido */
+#favoritos-container .item .info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Título */
+#favoritos-container .item h2 {
+  font-size: 0.9rem;
+  color: #6a1b9a;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Subtítulo */
+#favoritos-container .item h3 {
+  font-size: 0.75rem;
+  color: #ad1457;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Precio */
+#favoritos-container .item p {
+  font-weight: bold;
+  color: #8e24aa;
+  margin: 4px 0;
+}
+
+/* Botón eliminar */
+#favoritos-container .item button {
+  margin-top: 6px;
+  align-self: flex-start;
+  padding: 6px 10px;
+  background-color: #f06292;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#favoritos-container .item button:hover {
+  background-color: #ec407a;
+}
+
+/* Toque activo */
+#favoritos-container .item:active {
+  transform: scale(0.97);
+}
+}
+

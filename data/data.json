@@ -2,43 +2,43 @@
   {
     "id": 1,
     "nombre": "Vasijita",
-    "descripcion": "Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.",
+    "descripcion": "Vasija pequeña, por lo común de loza o de metal y con asa,",
     "precio": 120,
     "imagen": "images/WhatsApp Image 2025-05-28 at 16.45.39.jpeg"
   },
   {
     "id": 2,
-    "nombre": "Vasijita",
-    "descripcion": "Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.",
-    "precio": 135,
+    "nombre": "Luana",
+    "descripcion": "Vasija pequeña, por lo común de loza o de metal.",
+    "precio": 15,
     "imagen": "images/WhatsApp Image 2025-05-28 at 16.45.40 (1).jpeg"
   },
   {
     "id": 3,
-    "nombre": "Vasijita",
-    "descripcion": "Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.",
-    "precio": 135,
+    "nombre": "Tazon",
+    "descripcion": "Vasija pequeña, por lo común de loza o de metal.",
+    "precio": 108,
     "imagen": "images/WhatsApp Image 2025-05-28 at 16.45.40 (2).jpeg"
   },
   {
     "id": 4,
-    "nombre": "Vasijita",
-    "descripcion": "Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.",
-    "precio": 135,
+    "nombre": "Onda",
+    "descripcion": "Vasija pequeña, por lo común de loza o de metal y con asa.",
+    "precio": 10,
     "imagen": "images/WhatsApp Image 2025-05-28 at 16.45.40 (3).jpeg"
   },
   {
     "id": 5,
-    "nombre": "Vasijita",
-    "descripcion": "Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.",
-    "precio": 135,
+    "nombre": "Taza Little",
+    "descripcion": "Vasija pequeña, por lo común de loza o de metal y con asa.",
+    "precio": 235,
     "imagen": "images/WhatsApp Image 2025-05-28 at 16.45.40 (4).jpeg"
   },
   {
     "id": 6,
-    "nombre": "Vasijita",
-    "descripcion": "Vasija pequeña, por lo común de loza o de metal y con asa, empleada generalmente para tomar líquidos.",
-    "precio": 135,
+    "nombre": "Vaso Frutilla",
+    "descripcion": "Vasija pequeña, por lo común de loza o de metal.",
+    "precio": 535,
     "imagen": "images/WhatsApp Image 2025-05-28 at 16.45.40.jpeg"
   } 
 ]
