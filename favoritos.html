@@ -21,29 +21,21 @@
 
   <footer id="footer"></footer>
 
-  <!-- ==========================
-       Scripts
-       ========================== -->
 
-  <!-- 1️⃣ Obtener productos desde JSON -->
-  <script src="js/obtenerProductosFetch.js"></script>
+  <script src="./js/obtenerProductosFetch.js"></script>
 
-  <!-- 2️⃣ Funciones del carrito -->
-  <script src="js/carritoModulo.js"></script>
-  <script src="js/carrito.js"></script>
+  <script src="./js/carritoModulo.js"></script>
+  <script src="./js/carrito.js"></script>
+  <script src="./js/favoritoModulos.js"></script>
+  <script src="./js/favoritos.js"></script>
 
-  <!-- 3️⃣ Funciones de favoritos -->
-  <script src="js/favoritoModulos.js"></script>
-  <script src="js/favoritos.js"></script>
-
-  <!-- 4️⃣ Inicialización -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // Sincronizar con LocalStorage
+    
       syncFavoritos();
       syncCarrito();
 
-      // Cargar productos desde JSON y luego mostrar favoritos
+  
       cargarProductosDesdeJSON(() => {
         mostrarFavoritos();
       });
